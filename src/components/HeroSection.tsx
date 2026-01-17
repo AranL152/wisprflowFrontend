@@ -4,7 +4,7 @@ import VoiceWaveform from "./VoiceWaveform";
 
 const HeroSection = () => {
   return (
-    <section className="relative pt-40 pb-16 px-4 overflow-hidden">
+    <section className="relative pt-40 pb-32 px-4 overflow-hidden min-h-screen">
       <div className="max-w-4xl mx-auto text-center relative">
         {/* Main headline */}
         <motion.h1
@@ -25,7 +25,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-lg md:text-xl max-w-2xl mx-auto mb-8 font-semibold text-[#141d21]"
         >
-          The voice-to-text AI that turns speech into clear, polished writing in
+          The voice-to-text AI that turns speech<br />into clear, polished writing in
           every app.
         </motion.p>
 
