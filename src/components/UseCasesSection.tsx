@@ -100,8 +100,7 @@ const UseCasesSection = () => {
             {/* Text */}
             <div>
               <h3 className="text-3xl md:text-4xl font-serif mb-4">
-                {activeCase.title.replace("Flow for ", "Flow for ")}
-                <span className="italic">{activeCase.label}</span>
+                Flow for <span className="italic">{activeCase.label}</span>
               </h3>
               <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
                 {activeCase.description}
