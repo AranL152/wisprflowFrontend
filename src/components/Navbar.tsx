@@ -33,7 +33,7 @@ const Navbar = () => {
     { label: 'Individuals', href: '#individuals' },
     { label: 'Business', href: '#business' },
     { label: 'Pricing', href: '#pricing' },
-    { label: 'About', href: '#about' },
+    { label: 'GitHub', href: 'https://github.com/JasonLovesDoggo/Flow', external: true },
   ];
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -116,7 +116,9 @@ const Navbar = () => {
             <a
               key={item.label}
               href={item.href}
-              onClick={(e) => scrollToSection(e, item.href)}
+              onClick={item.external ? undefined : (e) => scrollToSection(e, item.href)}
+              target={item.external ? '_blank' : undefined}
+              rel={item.external ? 'noopener noreferrer' : undefined}
               className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-stone-600 hover:text-stone-900 hover:bg-stone-100/80 rounded-lg transition-all duration-200"
             >
               {item.label}
@@ -155,7 +157,9 @@ const Navbar = () => {
             <a
               key={item.label}
               href={item.href}
-              onClick={(e) => scrollToSection(e, item.href)}
+              onClick={item.external ? () => setMobileMenuOpen(false) : (e) => scrollToSection(e, item.href)}
+              target={item.external ? '_blank' : undefined}
+              rel={item.external ? 'noopener noreferrer' : undefined}
               className="flex items-center justify-between w-full px-4 py-3 text-sm font-medium text-stone-700 hover:bg-stone-100 rounded-lg transition-colors"
             >
               {item.label}

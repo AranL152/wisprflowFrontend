@@ -1,0 +1,35 @@
+{
+	"folders": [
+		{
+			"path": "../Flow"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {},
+	"launch": {
+		"configurations": [
+			{
+				"type": "swift",
+				"request": "launch",
+				"args": [],
+				"cwd": "${workspaceFolder:Flow}",
+				"name": "Debug FlowWisprApp (Flow)",
+				"target": "FlowWisprApp",
+				"configuration": "debug",
+				"preLaunchTask": "swift: Build Debug FlowWisprApp (Flow)"
+			},
+			{
+				"type": "swift",
+				"request": "launch",
+				"args": [],
+				"cwd": "${workspaceFolder:Flow}",
+				"name": "Release FlowWisprApp (Flow)",
+				"target": "FlowWisprApp",
+				"configuration": "release",
+				"preLaunchTask": "swift: Build Release FlowWisprApp (Flow)"
+			}
+		]
+	}
+}
